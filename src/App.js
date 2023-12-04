@@ -19,7 +19,7 @@ import { jwtDecode } from 'jwt-decode';
 function App() {
 
   //to save token of user login use jwt call it in login
-  const [userData, setUserData]=useState({})
+  const [userData, setUserData]=useState(null)
   function saveUserData(){  //send it to login & layout then navbar
     let encodedToken = localStorage.getItem('UserToken');
     let decodedToken = jwtDecode(encodedToken);
